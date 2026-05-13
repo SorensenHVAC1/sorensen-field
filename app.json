@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "Sorensen Field",
+    "slug": "sorensen-field",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "sorensenfield",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sorensenhvac.field",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Scanner needs camera access to scan QR codes",
+        "NSLocationWhenInUseUsageDescription": "Location helps with job routing"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#030810",
+        "foregroundImage": "./assets/images/android-icon-foreground.png"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.sorensenhvac.field",
+      "permissions": ["android.permission.CAMERA", "android.permission.ACCESS_FINE_LOCATION"]
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff",
+          "dark": {
+            "backgroundColor": "#000000"
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
