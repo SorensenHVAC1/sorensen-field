@@ -6,6 +6,7 @@ import WorkOrdersScreen from './screens/work-orders';
 import InvoicesScreen from './screens/invoices';
 import ScannerScreen from './screens/scanner';
 import ProfileScreen from './screens/profile';
+import SettingsScreen from './screens/settings';
 
 const Tab = createBottomTabNavigator();
 
@@ -60,6 +61,14 @@ export function RootNavigator() {
           options={{
             title: 'Profile',
             tabBarIcon: ({ color }) => <MaterialIcons name="person" size={24} color={color} />,
+          }}
+        />
+        <Tab.Screen
+          name="settings"
+          component={SettingsScreen}
+          options={{
+            title: 'Settings',
+            tabBarIcon: ({ color }) => <MaterialIcons name="settings" size={24} color={color} />,
           }}
         />
       </Tab.Navigator>

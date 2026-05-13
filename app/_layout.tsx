@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Stack } from 'expo-router';
 import { AuthProvider, useAuth } from '@/context/AuthContext';
+import { ThemeProvider } from '@/context/ThemeContext';
 import { LoginScreen } from './auth/login';
 import { RootNavigator } from './root-navigator';
 
@@ -21,7 +22,9 @@ function RootLayout() {
 export default function App() {
   return (
     <AuthProvider>
-      <RootLayout />
+      <ThemeProvider>
+        <RootLayout />
+      </ThemeProvider>
     </AuthProvider>
   );
 }
